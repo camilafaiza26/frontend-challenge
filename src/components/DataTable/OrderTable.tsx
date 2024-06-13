@@ -1,5 +1,5 @@
 import React from "react";
-import Action from "../DataTable/Action";
+import Action from "@/components/DataTable/Action";
 
 type OrderProps = {
   data: {

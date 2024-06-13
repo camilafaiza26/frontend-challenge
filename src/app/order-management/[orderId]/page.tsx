@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
-import PageTitle from "../../../components/PageTitle";
+import PageTitle from "@/components/PageTitle";
 
 interface Product {
   quantity: number;

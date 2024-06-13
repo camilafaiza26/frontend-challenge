@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
-import InputWithLabel from "../../components/Form/InputWithLabel";
-import PageTitle from "../../components/PageTitle";
-import Button from "../../components/Form/Button";
-import OrderTable from "../../components/DataTable/OrderTable";
-import Paging from "../../components/DataTable/Paging";
-import Loader from "../../components/Loader";
+import InputWithLabel from "@/components/Form/InputWithLabel";
+import PageTitle from "@/components/PageTitle";
+import Button from "@/components/Form/Button";
+import OrderTable from "@/components/DataTable/OrderTable";
+import Paging from "@/components/DataTable/Paging";
+import Loader from "@/components/Loader";
 
 const List = () => {
   const [orders, setOrders] = useState([]);
@@ -48,12 +48,12 @@ const List = () => {
     }
   };
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page: number) => {
     setCurrentPage(page);
     fetchData(page, showPerPage);
   };
 
-  const handleShowPerPageChange = (limit) => {
+  const handleShowPerPageChange = (limit: number) => {
     setShowPerPage(limit);
     setCurrentPage(1);
     fetchData(1, limit);

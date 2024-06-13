@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import InputWithLabel from "../../../../components/Form/InputWithLabel";
-import Button from "../../../../components/Form/Button";
-import PageTitle from "../../../../components/PageTitle";
+import InputWithLabel from "@/components/Form/InputWithLabel";
+import Button from "@/components//Form/Button";
+import PageTitle from "@/components/PageTitle";
 import { motion } from "framer-motion";
 import Select, { ValueType, StylesConfig } from "react-select";
 import { Toaster, toast } from "sonner";

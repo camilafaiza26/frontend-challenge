@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DialogConfirmation from "../../components/DialogConfirmation";
+import DialogConfirmation from "@/components/DialogConfirmation";
 import axios from "axios";
 import { Toaster, toast } from "sonner";
 

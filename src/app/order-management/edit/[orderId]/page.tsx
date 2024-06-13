@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import InputWithLabel from "../../../../components/Form/InputWithLabel";
-import Button from "../../../../components/Form/Button";
-import PageTitle from "../../../../components/PageTitle";
+import InputWithLabel from "@/components//Form/InputWithLabel";
+import Button from "@/components//Form/Button";
+import PageTitle from "@/components//PageTitle";
 import { motion } from "framer-motion";
 import Select, { ValueType, StylesConfig } from "react-select";
 import { Toaster, toast } from "sonner";
@@ -18,7 +18,7 @@ interface Product {
 
 interface ProductOption {
   value: number;
-  label: string;
+  label: number | string;
   price: number;
 }
 
@@ -146,12 +146,12 @@ export default function EditOrderPage() {
         return;
       }
     }
-
     const orderData: OrderData = {
       customer_name: customerName,
       products: products.map((_, index) => ({
         product_id: selectedProducts[index]?.value,
         quantity: quantities[index],
+        product_price: selectedProducts[index]?.price,
       })),
     };
 
